@@ -21,7 +21,7 @@ function displayOCRResult(result) {
 
 function performOCR() {
     var image = document.getElementById('loaded_file');
-    var apiUrl = '/ocr'; // 실제 서버의 OCR API 엔드포인트 URL로 대체해야 함
+    var apiUrl = 'http://127.0.0.1:8000/ocr'; 
 
     // 이미지 데이터를 FormData로 생성
     var formData = new FormData();
@@ -43,7 +43,7 @@ function performOCR() {
 }
 
 // 이미지 업로드 input 요소에 change 이벤트 리스너 추가
-var imageUpload = document.getElementById('image_upload');
+var imageUpload = document.getElementById('loaded_file');
 imageUpload.addEventListener('change', function() {
     var imageContainer = document.getElementById('image-container');
     var image = document.getElementById('loaded_file');

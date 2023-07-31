@@ -15,7 +15,6 @@ class OCR(APIView) :
             'result' : result
         })
 
-
 def index(request) :
     return render(request, 'index.html')
 
