@@ -1,17 +1,35 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <link rel="stylesheet" href="{% static '/style/grid.css' %}">
+    <title>OCR-SERVER</title>
 </head>
-{% include 'header.html' %}
-<body>
-    <section>
-        <h2>Hello world!</h2>
+{% include 'header.html'%}
 
-    </section>
+<body>
+    <!-- <h1>Hello world! {{ data.count }}</h1> -->
+    <div class="wrap">
+        <p><h2 class="Jemoc">게시글 목록</h2></p>
+        <hr>
+    <div class="container">
+    <!-- {% for board in data %}
+            <div class="con">
+                <p class="title">제목: {{ board.title }}</p>
+                <span class="author">작성자: {{ board.author }}</span>
+                <div class="content">내용: {{ board.content }}</div>
+                <p class="created_at">등록일: <input type="datetime" readonly value="{{ board.created_at }}"></p>
+                <p class="updated_at">수정일: <input type="datetime" readonly value="{{ board.updated_at }}">   </p>
+                <span class="file">파일: {{ board.file }}</span>
+            </div>
+            <br>
+            {% endfor %}  -->
+            <button><a href="update">회원정보수정</a></button>
+        </div>
+    </div>
+    <hr class="hr">
+    {% include 'footer.html'%}
 </body>
-{% include 'footer.html' %}
 </html>

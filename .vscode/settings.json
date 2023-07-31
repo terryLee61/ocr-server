@@ -2,9 +2,5 @@
     "[python]": {
         "editor.defaultFormatter": "ms-python.black-formatter"
     },
-    "python.formatting.provider": "none",
-    "cSpell.words": [
-        "pytesseract",
-        "pyuploadcare"
-    ]
+    "python.formatting.provider": "none"
 }

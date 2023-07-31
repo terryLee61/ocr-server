@@ -1,28 +1,24 @@
-{% load static %}
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'style/form.css' %}">
-    <script src="{% static 'script/csrf.js' %}"></script>
+    <title>Document</title>
 </head>
 {% include 'header.html' %}
 
 <body>
-    <section>
-        <h2>회원가입</h2>
-        <form>
-            <input type="text" id="username" name="username" placeholder="username">
-            <input type="text" id="name" name="name" placeholder="name">
-            <input type="eamil" id="email" name="email" placeholder="email">
-            <input type="password" id="password" name="password" placeholder="password">
-            <input type="button" value="회원가입" onclick="join()">
-        </form>
-    </section>
-    <script src="{% static 'script/user-api.js' %}"></script>
-</body>
-{% include 'footer.html' %}
+    <h2>회원가입</h2>
+    <form action="api/v1/users/" method="POST">
+        {% csrf_token %}
+        <input type="text" id="username" name="username" placeholder="아이디">
+        <input type="password" id="password" name="password" placeholder="비밀번호">
+        <input type="text" id="email" name="email" placeholder="이메일">
+        <input type="text" id="last_name" name="last_name" placeholder="성">
+        <input type="text" id="first_name" name="first_name" placeholder="이름">
+        <input type="submit" value="저장">
+    </form>
+    {% include 'footer.html' %}
 
+</body>
 </html>
