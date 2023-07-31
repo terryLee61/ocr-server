@@ -9,12 +9,16 @@ $.ajax({
         
         $('#boards-container').append(`
         <div class="board">
+            <div class="img">
                 <img src="${image_url}">
+            </div>
+            <div class="img_sub">
                 <p>
                     <a href="/board/${board.no}"><h4>${board.title}</h4></a>
                     <span>${board.author}</span>
                 </p>
             </div>
+        </div>
         `)
     })
 });
