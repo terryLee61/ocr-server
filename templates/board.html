@@ -16,10 +16,12 @@
             <input type="text" id="title" name="title" readonly>
             <p type="text" id="author"></p>
             <textarea id="contents" name="contents" readonly></textarea>
-            <input type="button" name="ocr" id="ocr" value="이미지에서 텍스트 추출하기" onclick="ocr()">
+            <textarea id="ocr_contents" name="ocr_contents" readonly></textarea>
+            <input type="button" name="ocr" id="ocr" value="이미지에서 텍스트 추출하기" onclick="performOCR()">
             <div id="image-container">
                 <img id="loaded_file" name="loaded_file" src="">
             </div>
+            <!-- <input type="file" id="image_upload" accept="image/*"> -->
             <input type="datetime" id="created_at" readonly>
             <input type="datetime" id="modified_at" readonly>
         </div>

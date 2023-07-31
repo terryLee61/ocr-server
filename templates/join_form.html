@@ -1,14 +1,17 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style/form.css' %}">
+    <link rel="stylesheet" href="{% static 'style/grid.css' %}">
     <title>Document</title>
 </head>
 {% include 'header.html' %}
 
 <body>
-    <h2>회원가입</h2>
+    <h2 class="h2">회원가입</h2>
     <form action="api/v1/users/" method="POST">
         {% csrf_token %}
         <input type="text" id="username" name="username" placeholder="아이디">
