@@ -19,17 +19,25 @@ header{
     background-color: rgba(165, 42, 42, 0.568);
 }
 
+.h2{
+    text-align: center;
+}
+
 .content{
     border: solid 1px black;
     height: 200px;
     background-color: antiquewhite
 }
-.container{
+.divs{
     text-align: center;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     height: 100%;
+}
+
+#ocr:hover{
+    background-color: gainsboro;
 }
 
 .wrap{

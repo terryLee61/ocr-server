@@ -5,16 +5,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'style/form.css' %}" </head>
+    <link rel="stylesheet" href="{% static 'style/form.css' %}">
+    <link rel="stylesheet" href="{% static 'style/grid.css' %}">
+</head>
     {% include 'header.html' %}
-
 <body>
     <section>
-        <h2>게시글</h2>
+        <h2 class="h2">게시글</h2>
         <div id="board-contents">
             <input type="text" id="title" name="title" readonly>
             <p type="text" id="author"></p>
             <textarea id="contents" name="contents" readonly></textarea>
+            <input type="button" name="ocr" id="ocr" value="이미지에서 텍스트 추출하기">
             <div id="image-container">
                 <img id="loaded_file" name="loaded_file" src="">
             </div>

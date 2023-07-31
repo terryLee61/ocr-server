@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,10 +13,12 @@
 <body>
     <!-- <h1>Hello world! {{ data.count }}</h1> -->
     <div class="wrap">
-        <p><h2 class="Jemoc">게시글 목록</h2></p>
+        <p>
+        <h2 class="Jemoc">게시글 목록</h2>
+        </p>
         <hr>
-    <div class="container">
-    <!-- {% for board in data %}
+        <div class="container">
+            <!-- {% for board in data %}
             <div class="con">
                 <p class="title">제목: {{ board.title }}</p>
                 <span class="author">작성자: {{ board.author }}</span>
@@ -26,10 +29,22 @@
             </div>
             <br>
             {% endfor %}  -->
-            <button><a href="update">회원정보수정</a></button>
+            <!-- <button><a href="mypage">회원정보수정</a></button> -->
+            <div class="h2">
+                <h2>문자 인식</h2>
+            </div>
+            <div class="divs">
+                <div class="div1">
+                    (이미지 올리는 곳)
+                </div>
+                <div class="div2">
+                    (문자열 나오는 곳)
+                </div>
+            </div>
         </div>
     </div>
     <hr class="hr">
     {% include 'footer.html'%}
 </body>
+
 </html>
